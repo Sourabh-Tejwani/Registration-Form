@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'foruser.css' %}">
+</head>
+<body>
+<div class="center">
+	<form method="post">    {% csrf_token %}
+
+		<div class="text_field">
+			<label>First Name</label>
+			<input type="text" name="firstname" required>
+		</div>
+		<div class="text_field">
+			<label>Last Name</label>
+			<input type="text" name="lastname" required>
+		</div>
+		<div class="text_field">
+			<label>Email</label>
+			<input type="email" name="email" required>
+		</div>
+		<div class="text_field">
+			<label>Password</label>
+			<input type="password" name="password" required>
+		</div>
+		<div class="date_field">
+			<label>Date Of Birth</label>
+			<input type="date" name="birthday" required>
+		</div>
+
+
+		<div class="text_field">
+			<label>Mobile Number</label>
+			<input type="number" name="contactnumber" required>
+		</div>
+
+
+		<div class="Gender">
+		<label>Gender</label>
+			<input type="radio" name="gender" value="male">
+			<label for="male">Male</label>
+			<input type="radio" id="female" name="gender" value="female">
+			<label for="female">Female</label>
+			<input type="radio" id="other" name="gender" value="other">
+			<label for="other">Other</label>
+		</div>
+
+		<div class="text_area">
+			<label>Address</label>
+			<textarea name="address" required></textarea>
+		</div>
+
+		<div class="text_field">
+			<label>City</label>
+			<input type="text" name="city" required>
+		</div>
+
+		<div class="text_field">
+			<label>State</label>
+			<input type="text" name="state" required>
+		</div>
+
+		<div class="text_field">
+			<label>Country</label>
+			<input type="text" name="country" required>
+		</div>
+
+		<input type="submit" value="Submit">
+
+
+
+
+	</form>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

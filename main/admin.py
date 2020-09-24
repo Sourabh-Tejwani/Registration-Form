@@ -5,7 +5,7 @@ from .models import User
 
 class UserAdmin(admin.ModelAdmin):
 	fieldsets=[
-			("Name",{"fields":["first_name","last_name"]}),
+			("Name",{"fields":["picture","first_name","last_name","password"]}),
 			("Information",{"fields":["email","date_of_birth","contact","gender"]}),
 			("Address",{"fields":["address","city","state","country"]}),
 	]

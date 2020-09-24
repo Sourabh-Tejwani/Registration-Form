@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en"  dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet"  href="{% static 'log.css' %}">
+</head>
+<body>
+	<div class="center">
+		<h1>Login</h1>
+		<form method="post">    {% csrf_token %}
+			<p>{{error}}</p>
+			<div class="text_field">
+				<label>Email</label>
+				<input type="email" name="email" required>
+			</div>
+			<div class="text_field">
+				<label>Password</label>
+				<input type="password" name="password" required>
+			</div>
+			<div class="pass">
+				Forgot Password?
+			</div>
+			<input type="submit" value="login">
+			<div class="signup_link">
+				Not a member <a href="signup">SignUp</a>
+			</div>
+		</form>
+	</div>	
+
+</body>
+</html>

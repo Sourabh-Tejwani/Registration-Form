@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en"  dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet"  href="{% static 'prof.css' %}">
+
+</head>
+<body>
+	<nav>
+		<a href="/"><p>Logout</p></a>
+		<p>Welcome {{ request.session.name }}</p>
+	</nav>
+	<div class="center">
+		<img src="{{ request.session.picture }}"  width="200px" height="200px">
+		<form method="POST" enctype="multipart/form-data">    {% csrf_token %}
+		<div>
+		  <input type="file"  name="myfile" accept="image/*">
+		  <input type="submit" value="Submit">
+		</div>
+		</form>
+		<div class="text_field">
+			<label>First Name:-</label>{{ request.session.name }}</div>
+		<div class="text_field">
+			<label>Last Name:-</label>{{ request.session.last_name }}</div>
+		<div class="text_field">
+			<label>Email:-</label>{{ request.session.email }}</div>
+		<div class="text_field">
+			<label>Mobile number:-</label>{{ request.session.contact }}</div>
+		<div class="text_field">
+			<label>Date of Birth:-</label>{{ request.session.date_of_birth }}</div>
+		<div class="text_field">
+			<label>Gender:-</label>{{ request.session.gender }}</div>
+		<div class="text_field">
+			<label>Address:-</label>{{ request.session.address }}</div>
+		<div class="text_field">
+			<label>City:-</label>{{ request.session.city }}</div>
+		<div class="text_field">
+			<label>State:-</label>{{ request.session.state }}</div>
+		<div class="text_field">
+			<label>Country:-</label>{{ request.session.country }}</div>
+	</div>	
+</body>
+</html>

@@ -16,8 +16,14 @@ Including another URLconf
 from django.urls import path
 from . import views
 
+
 app_name = "main"
 
 urlpatterns = [
-    path("",views.formpage, name="formpage"),
+    path("",views.loginpage, name="loginpage"),
+    path("signup/",views.formpage, name="signup"),
+    path("profile/",views.profile, name="profile"),
+
 ]
+
+

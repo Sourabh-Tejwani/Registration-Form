@@ -11,8 +11,10 @@ class User(models.Model):
 	gender=models.CharField(max_length=6)
 	address=models.CharField(max_length=200)
 	city=models.CharField(max_length=100)
-	state=models.CharField(max_length=100)
-	country=models.CharField(max_length=100)
+	state=models.CharField(max_length=100 , null=True)
+	country=models.CharField(max_length=100 , null=True)
+	picture=models.URLField()
+	password=models.CharField(max_length=100)
 
 	def __str__(self):
 		return self.first_name+" "+self.last_name
